@@ -16,7 +16,19 @@
 
 /* THIS IS STUFF FOR MY STANDALONE APP */
 
-// Prevents same-domain links from being opened outside my standalone app 
+(function(alpha, bravo, charlie) {
+    if (charlie in bravo && bravo[charlie]) {
+        var delta, echo = alpha.location,
+            foxtrot = /^(alpha|html)$/i;
+        alpha.addEventListener("click", function(alpha) {
+            delta = alpha.target;
+            while (!foxtrot.test(delta.nodeName)) delta = delta.parentNode;
+            "href" in delta && (delta.href.indexOf("http") || ~delta.href.indexOf(echo.host)) && (alpha.preventDefault(), echo.href = delta.href)
+        }, !1)
+    }
+})(document, window.navigator, "standalone")
+
+// Prevents same-domain links from being opened outside my standalone app
 // (e.g. Safari, Google Chrome)
 
 var doc = document;
@@ -35,7 +47,7 @@ if (window.navigator["standalone"]) {
     }, false);
 }
 
-// Tests useragent to see if the client using an iPad, iPhone, or iPod and 
+// Tests useragent to see if the client using an iPad, iPhone, or iPod and
 // toggles the 'Download app' notice
 
 var iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
@@ -166,7 +178,7 @@ function performCalculations() {
             // If the specific element of the ip/submask can't be converted to
             // an integer without not equaling (using == not ===) the string
             // version, then it's invalid
-            // 
+            //
             // If the integer element is < 0 or > 255 then it's invalid as well
             if (itv_int != itv_arr[j] || itv_int < 0 || itv_int > OCTET_MAX) {
                 ip ? throwError(INVAL_IP) : throwError(INVAL_SM)
@@ -245,7 +257,7 @@ function performCalculations() {
      * @return {number} if param isn't 0, return 32 - ceil(log2(input)), else 0
      */
     function getCidrFromHost(n) {
-        // as long as the number of hosts isn't 0, find (log2(hosts)), round 
+        // as long as the number of hosts isn't 0, find (log2(hosts)), round
         // up, and subtract that from BITS_MAX to find the correct CIDR
         return 0 !== n ? BITS_MAX - Math.ceil(Math.log(n) / Math.log(2)) : 0;
     }
@@ -414,7 +426,7 @@ function performCalculations() {
 
         var binarystring = i + v;
 
-        // .{8} means find 8 of any characters, and we repeat this 3 times 
+        // .{8} means find 8 of any characters, and we repeat this 3 times
         // because we need to insert 3 periods. See: http://regexr.com/3943q
         return binarystring.replace(/(.{8})(.{8})(.{8})/g, "$1.$2.$3.");
     }

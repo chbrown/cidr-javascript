@@ -42,7 +42,7 @@
 </p>
 
 <h2>How do I use it on my website?</h2>
-<p>It's simple: include the JavaScript file <a href="/src/js/master.js">"master.js"</a> on your website, and make sure you have the form/table HTML files <a href="/src/html/html.html">found here</a>.</p>
+<p>It's simple: include the JavaScript file <a href="master.js">"master.js"</a> on your website, and make sure you have the form/table HTML files <a href="index.html">found here</a>.</p>
 
 <h2>Can I use this on my own website? Or somewhere else?</h2>
 <p>Yes. The code's previous GPLv3 has been removed and is now under CC BY-SA 4.0.

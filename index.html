@@ -14,8 +14,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Eric Lagergren">
-    <script src="assets/js/yepnope.js"></script>
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -23,14 +22,14 @@
 
 
         <p class="close">
-            <img class="cloze" src="assets/cross.png">
+            <img class="cloze" src="img/cross.png">
         </p>
         <p>
             Press the 'share' button below and then choose "Add to Home Screen". The app will then be installed as an icon, just like a regular app from the App Store.
         </p>
         <p>
-            <img class="share" src="assets/iphone_share.png"> →
-            <img class="share shareHalf" src="assets/download.png">
+            <img class="share" src="img/iphone_share.png"> →
+            <img class="share shareHalf" src="img/download.png">
         </p>
         <br>
         <p>
@@ -43,7 +42,7 @@
     <form name="valuebox" onsubmit="performCalculations(); return false;">
         <div class="left">
             <h1>Subnetting Calculator</h1>
-            <nav><a href="/about">about </a><a href="/license">license </a><a href="https://www.github.com/EricLagerg/cidr-javascript/">source </a><a href="javascript:void(0)" onclick="window.location.reload(true);">refresh</a>
+            <nav><a href="about.html">about </a><a href="http://creativecommons.org/licenses/by-sa/4.0/">license </a><a href="https://www.github.com/chbrown/cidr-javascript/">source </a><a href="javascript:void(0)" onclick="window.location.reload(true);">refresh</a>
             </nav>
             <input type="checkbox" id="c1" name="cb">
             <label class="first" for="c1">Use # of Hosts?</label>
@@ -51,8 +50,6 @@
             <label for="submask">Submask or CIDR or Num Req Hosts</label>
             <input class="clearfix" type="text" name="ip" placeholder="192.168.1.1" />
             <label for="ip">IPv4 Address</label>
-            <!--<input class="clearfix" type="number" name="split" placeholder="4" />
-            <label for="split"># Networks (default: 1)</label>-->
             <input class="clearfix" type="submit" value="submit" />
         </div>
         <div class="right" id="info">
@@ -116,7 +113,7 @@
         <a id="refresh" class="ux-actions clearfix" href="javascript:void(0)" onclick="window.location.reload(true);window.scroll(0,0);">REFRESH</a>
         <a id="top" class="ux-actions clearfix" href="javascript:void(0)" onclick="window.scroll(0,0);">TO TOP</a>
     </div>
-    <script src="/src/js/master.min.js"></script>
+    <script src="master.js"></script>
 </body>
 
 </html>
